@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: teknikhub/gitlab
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
