@@ -1,7 +1,7 @@
 ---
 namespace: staging
 replicas:
-  - name: nginx-deployment
+  - name: nginx
     count: 2
 images:
   - name: teknikhub/gitlab
