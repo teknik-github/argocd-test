@@ -4,7 +4,7 @@ replicas:
   - name: nginx-deployment
     count: 2
 images:
-  - name: aputra/nginx-lesson159
+  - name: teknikhub/gitlab
     newTag: v0.1.0
 resources:
   - ../../my-app
