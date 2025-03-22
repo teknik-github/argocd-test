@@ -16,5 +16,11 @@ spec:
         app: myapp
     spec:
       containers:
-        - name: myapp
-          image: teknikhub/gitlab:placeholder  # Akan di-update otomatis
+      - name: myapp
+        image: teknikhub/gitlab:placeholder
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
