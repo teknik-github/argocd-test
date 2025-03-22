@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: myapp
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myapp=teknikhub/gitlab
-    argocd-image-updater.argoproj.io/myapp.update-strategy: latest
-    argocd-image-updater.argoproj.io/myapp.allow-tags: regexp:^[0-9a-f]{8}$  # Sesuai dengan format SHA pendek (8 karakter)
+    argocd-image-updater.argoproj.io/image-list: my-app=teknikhub/gitlab
+    argocd-image-updater.argoproj.io/my-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/my-app.allow-tags: regexp:^[0-9a-f]{8}$  # Sesuai dengan format SHA pendek (8 karakter)
 spec:
   selector:
     matchLabels:
