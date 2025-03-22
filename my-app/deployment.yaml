@@ -1,23 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: myapp
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myapp=teknikhub/gitlab
+    argocd-image-updater.argoproj.io/myapp.update-strategy: latest
+    argocd-image-updater.argoproj.io/myapp.allow-tags: regexp:^[0-9a-f]{8}$  # Sesuai dengan format SHA pendek (8 karakter)
 spec:
-  selector:
-    matchLabels:
-      app: nginx
   template:
-    metadata:
-      labels:
-        app: nginx
     spec:
       containers:
-      - name: nginx
-        image: teknikhub/gitlab
-        imagePullPolicy: Always
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 80
+        - name: myapp
+          image: teknikhub/gitlab:placeholder  # Akan di-update otomatis
