@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: teknikhub/gitlab:18396ffc
+        image: httpd:latest
         resources:
           limits:
             memory: "128Mi"
