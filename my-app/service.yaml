@@ -8,3 +8,5 @@ spec:
   ports:
   - port: 8000
     targetPort: 80
+  externalIPs:
+  - 10.128.0.2
